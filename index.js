@@ -13,7 +13,6 @@ const msgQueue = exchange.queue({ name: topic, durable: true });
 
 msgQueue.consume(function (data, ack, nack, msg) {
   sendMsg(data);
-  nack();
 });
 
 counter = 0;
